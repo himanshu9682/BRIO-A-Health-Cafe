@@ -997,22 +997,25 @@ body {
 
 .footer-with-logo {
     width: 100%;
-    max-width: 1300px;
-    margin: 685px auto;
+    margin: 673px auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* overflow: hidden; */
+    /* background: transparent; */
+    POSITION: RELATIVE;
 }
 
 .footer-info {
-    left: -3px;
-    transform: translate(0%, -102%);
-    width: 1350px;
+    left: 0;
+    width: 100%;
     height: 221px;
-    position: relative;
+    position: absolute;
     background: #C18136;
     overflow: hidden;
+    Z-INDEX: 2;
+    BOTTOM: 0;
 }
 
 .contact-details {
