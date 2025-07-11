@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>BRIO- A Health Cafe</title>
 </head>
@@ -11,11 +16,11 @@
 <body>
     <div class="page-wrapper">
         <!-- Nav bar section -->
-        <div class="nav-bar-box">
+        <div class="nav-bar-box" id="navbar">
             <div class="header">
                 <img class="logo" src="Assets/Images/Logo-nav.svg" alt="Logo" />
                 <div class="nav">
-                    <div class="nav-item"><a href="#home">Home</a></div>
+                    <div class="nav-item"><a href="#home" class="active">Home</a></div>
                     <div class="nav-item"><a href="#about-us">About Us</a></div>
                     <div class="nav-item"><a href="#products">Products</a></div>
                     <div class="nav-item"><a href="#contact-us">Contact Us</a></div>
@@ -24,11 +29,10 @@
             </div>
         </div>
         <!-- Banner section -->
-        <div class="hero-banner">
+        <div class="hero-banner" id="home">
             <img src="Assets/Images/banner-img.png"
                 alt="Promotional banner showing organic food and healthy lifestyle products" class="banner-image" />
         </div>
-
         <div class="banner">
 
             <div class="banner-content">
@@ -47,7 +51,7 @@
             <div class="who-we-are">
                 <div class="title">Who we are?</div>
                 <div class="who-we-are-content">
-                    <div class="description" id="#about-us">
+                    <div class="description" id="about-us">
                         <p>BRIO – A Health Café is India’s first-ever health café brand, founded in 2020 with an
                             inspiring
                             mission:
@@ -393,12 +397,12 @@
                         <h6 style="margin-left: -285px;">Contact form</h6>
                     </div>
                     <div class="form-text-area-box">
-                        <div style="margin-top: 60px;">
+                        <div style="margin-top: 20px;">
                             <div class="input-container">
-                                <input type="text" placeholder="Name" class="input-field" required/>
+                                <input type="text" placeholder="Name" class="input-field" required />
                             </div>
                             <div class="input-container">
-                                <input type="email" placeholder="Email" class="input-field" required/>
+                                <input type="email" placeholder="Email" class="input-field" required />
                             </div>
                             <div class="input-container">
                                 <textarea placeholder="Message" class="input-field message-field" required></textarea>
@@ -416,55 +420,25 @@
             </div>
         </div>
         <div class="footer-image-layout-setting" style="">
-            <div class="footer-image-section-brio">
-                <div>
-                    <div class="background-section">
-                        <img src="Assets/Images/AdobeStock_627226570 1.svg" alt="Main Image" class="main-image" />
-                        <img src="Assets/Images/brio M yoga2 1.png" alt="Secondary Image" class="secondary-image" />
-                        <div class="background-shape-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="836" height="326" viewBox="0 0 836 326"
-                                fill="none">
-                                <path
-                                    d="M206.419 28.0061C180.752 27.0032 159.076 39.2059 147.754 51.2766C136.434 63.3472 129.729 76.9882 110.91 86.5099C100.928 91.5609 88.3367 94.9999 76.6646 98.995C57.2825 105.629 40.0848 113.964 26.1526 123.475C7.58894 136.148 -5.35012 152.452 3.50768 166.839C9.40859 176.424 24.1858 183.887 30.3147 193.429C44.0986 214.891 11.6823 241.756 34.3927 260.975C43.3379 268.545 59.2235 273.145 71.5343 279.355C96.7194 292.062 107.587 311.836 138.466 320.92C167.077 329.336 204.68 325.978 237.082 319.819C269.484 313.661 300.856 304.872 334.794 302.765C374.585 300.295 412.833 307.282 451.386 311.274C489.94 315.265 534.735 315.537 566.157 302.243C589.385 292.417 601.423 276.645 626.829 268.366C653.283 259.745 686.667 261.582 716.483 264.369C727.841 265.43 739.529 266.581 751.089 265.359C766.395 263.743 779.344 258.166 789.56 252.005C800.641 245.323 809.63 237.442 811.75 228.988C815.768 212.973 794.901 198.429 795.703 182.385C796.641 163.635 826.436 147.429 833.63 128.842C839.168 114.533 829.96 99.4049 809.831 89.7475C797.422 83.7933 781.541 79.9571 768.379 74.4246C748.268 65.9713 735.4 53.9737 717.692 44.2538C699.985 34.5338 673.602 26.8302 647.335 30.6644C638.544 31.9476 630.533 34.4252 622.131 36.331C584.338 44.9027 541.106 41.3503 504.325 33.7892C467.544 26.2281 434.434 14.9363 397.421 7.63778C360.407 0.339203 316.707 -2.59499 279.558 6.7362C256.881 12.4315 238.6 22.2021 215.733 27.6803C210.392 28.9609 201.169 28.5129 206.419 28.0061Z"
-                                    fill="#C18136" />
-                            </svg>
-                        </div>
-                        <div class="background-shape-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="929" height="241" viewBox="0 0 929 241"
-                                fill="none">
-                                <path
-                                    d="M861.744 42.691C867.243 35.2932 834.048 30.7467 800.192 29.1147C766.335 27.4831 727.459 27.3629 701.75 23.2762C688.112 21.1084 679.412 17.9917 669.006 15.2077C651.728 10.5849 629.296 6.80227 603.123 4.09758C568.251 0.493716 522.282 -1.04432 479.672 3.33905C451.286 6.25922 428.156 11.4159 399.87 14.395C336.247 21.0955 261.623 15.4196 203.605 24.3549C180.753 27.8743 165.813 32.9716 146.563 37.2667C107.177 46.0538 48.7454 51.7084 19.2892 61.6352C-8.00277 70.833 -2.05918 81.0416 12.5273 89.4127C27.1137 97.7838 49.4288 105.521 52.1125 114.855C55.2585 125.799 31.141 137.538 15.675 148.974C0.211167 160.41 -5.0989 173.129 30.2751 180.292C56.4226 185.588 100.939 186.94 122.38 193.054C144.705 199.42 136.009 209.111 124.921 217.916C120.698 221.27 116.181 224.73 118.555 227.843C121.698 231.966 136.562 234.906 153.392 236.995C171.65 239.261 193.594 240.779 217.894 240.277C263.924 239.327 308.201 231.523 354.639 229.659C408.911 227.48 452.893 233.803 506.06 233.417C546.992 233.12 591.785 228.54 621.819 221.583C640.336 217.293 653.062 212.296 670.432 207.849C696.973 201.053 733.059 195.846 763.029 189.565C793 183.284 818 174.81 809.534 167.873C806.7 165.551 800.325 163.606 795.647 161.476C774.607 151.893 789.271 139.19 814.907 127.79C840.543 116.391 876.626 105.545 901.525 94.1136C926.423 82.6825 939.341 69.9276 916.035 60.6258C901.81 54.9477 875.325 51.0457 861.749 45.2855C858.575 43.9402 860.805 41.2704 861.744 42.691Z"
-                                    fill="#552E00" />
-                            </svg>
-                        </div>
-                        <div class="background-shape-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="625" height="267" viewBox="0 0 625 267"
-                                fill="none">
-                                <path
-                                    d="M161.366 15.5822C142.308 13.2948 125.474 22.0399 116.359 31.2688C107.244 40.4977 101.478 51.2752 86.9244 57.9901C79.2044 61.5522 69.6324 63.6463 60.7136 66.2479C45.9036 70.5676 32.624 76.4043 21.7096 83.3901C7.16698 92.698 -3.39258 105.298 2.38901 117.575C6.24059 125.755 16.8227 132.705 20.8465 140.862C29.8959 159.21 4.233 179.338 20.0572 196.36C26.29 203.065 37.8598 207.736 46.6761 213.521C64.7122 225.356 71.6855 242.156 94.1668 251.353C114.997 259.874 143.191 259.275 167.671 256.088C192.15 252.902 216.012 247.504 241.405 247.72C271.178 247.973 299.266 255.875 327.751 261.345C356.237 266.813 389.581 269.596 413.735 260.515C431.59 253.803 441.449 241.587 460.838 236.265C481.027 230.724 505.784 234.135 527.831 238.119C536.23 239.636 544.869 241.246 553.547 240.907C565.037 240.459 574.997 236.636 582.953 232.18C591.584 227.346 598.725 221.411 600.783 214.615C604.682 201.742 589.966 188.65 591.472 175.569C593.233 160.282 616.34 148.726 622.75 133.93C627.685 122.539 621.685 109.635 607.242 100.583C598.337 95.0024 586.728 90.956 577.239 85.6774C562.741 77.6117 553.838 67.0602 541.201 58.0955C528.564 49.1309 509.353 41.3202 489.574 42.9561C482.954 43.5035 476.848 45.0728 470.483 46.1519C441.853 51.0051 409.858 45.6279 382.895 37.3395C355.932 29.0512 331.914 17.9202 304.762 9.83335C277.611 1.74646 245.233 -3.15168 217.038 2.3597C199.828 5.72346 185.66 12.6727 168.321 15.848C164.27 16.5904 157.427 15.6968 161.366 15.5822Z"
-                                    fill="#6ABF46" />
-                            </svg>
-                        </div>
-                        <img src="Assets/Images/briooutlet2 2.png" alt="Additional Image" class="additional-image" />
-                    </div>
-                </div>
+            <div class="footer-image-container-brio-outlet">
+                <img src="Assets/Images/Group 75 (1).webp" alt="">
             </div>
         </div>
         <!-- footer start -->
         <div class="footer-with-logo">
             <div class="footer-info">
                 <div class="contact-details">
-                    <span>Follow Us: briohealthcafe /</span><br />
-                    <span>Mail Us on: <a href="mailto:info@briohealthcafe.com">info@briohealthcafe.com</a></span><br />
-                    <span>Web: <a href="http://www.briohealthcafe.com">www.briohealthcafe.com</a></span><br />
-                    <span>Contact: +91-931 030 3995</span><br />
-                    <span>Headquarters:</span><br />
-                    <span>Stelwart Enterprises</span><br />
-                    <span>222-C, Kazikhera, Shiv Katra Road</span><br />
-                    <span>Lal Bangla, Kanpur, Uttar Pradesh 208007</span>
+                    <span class="follow-us">Follow Us : briohealthcafe /</span><br />
+                    <span class="mail-info">Mail Us on : info@briohealthcafe.com</span><br />
+                    <span class="web-info">Web : www.briohealthcafe.com</span><br />
+                    <span class="contact-number">Contact : +91- 931 030 3995</span><br />
+                    <span class="headquarters">Headquarters :</span><br />
+                    <span class="company-name">Stelwart Enterprises</span><br />
+                    <span class="address">222-C, Kazikhera, Shiv Katra Road<br />Lal Bangla, Kanpur, Uttar Pradesh
+                        <br />208007</span><br />
+                    <span class="copyright">© Copyright reserved - Brio - A Health Cafe</span>
                 </div>
-                <img src="Assets/Images/Logo Main2.png" alt="Logo" class="logo-image" />
-                <div class="footer-note">A product of Stelwart Enterprises</div>
+                <img src="Assets/Images/Logo Main.png" alt="Logo" class="logo-image" />
 
                 <div class="social-media">
                     <div class="social-icon" data-platform="Instagram"><svg xmlns="http://www.w3.org/2000/svg"
@@ -517,11 +491,37 @@
                                     <rect width="19" height="19" fill="white" />
                                 </clipPath>
                             </defs>
-                        </svg></div>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="developer-info-container">
+        <div class="developer-info">
+            <p>
+                Developed by:
+                <a href="#" target="_blank" rel="noopener">Himanshu Verma</a> <a href="https://github.com/himanshu9682"
+                    target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/himanshu3992/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </p>
+        </div>
+    </div>
 </body>
+<script>
+    const navLinks = document.querySelectorAll('.nav-item a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            navLinks.forEach(nav => nav.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+</script>
 
 </html>

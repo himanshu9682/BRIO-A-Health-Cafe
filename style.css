@@ -9,6 +9,19 @@ body {
     height: 100%;
 }
 
+.arya-regular {
+    font-family: "Arya", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.arya-bold {
+    font-family: "Arya", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 .header {
     width: 1350px;
     height: 90px;
@@ -28,12 +41,20 @@ body {
 
 .nav {
     left: 691px;
-    top: 40px;
+    top: 32px;
     position: absolute;
     display: inline-flex;
     justify-content: flex-start;
     align-items: center;
     gap: 32px;
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 1000;
+    background-color: white;
 }
 
 .nav-item {
@@ -51,6 +72,7 @@ body {
 }
 
 .nav-item a {
+    position: relative;
     text-decoration: none;
     padding: 0px;
     display: flex;
@@ -61,17 +83,32 @@ body {
     font-size: 23px;
     font-family: Arya;
     font-weight: 700;
-    line-height: 10px;
+    line-height: 25px;
     word-wrap: break-word;
 }
 
-.content-area {
-    width: 1335px;
-    height: 200px;
-    left: 0px;
-    top: 119px;
+/* Remove default underline */
+.nav-item a::after {
+    content: '';
     position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #75C200;
+    transition: width 0.3s ease;
 }
+
+/* Show underline for active link */
+.nav-item a.active::after {
+    width: 100%;
+}
+
+/* Optional: animate underline on hover */
+.nav-item a:hover::after {
+    width: 100%;
+}
+
 
 .banner {
     transform: translate(0%, -145%);
@@ -112,7 +149,7 @@ body {
 .english {
     font-size: 22.32px;
     font-family: Arya;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 25px;
 }
 
@@ -187,7 +224,7 @@ body {
     text-align: left;
     color: #1A5C00;
     font-size: 16px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 500;
     line-height: 24px;
     word-wrap: break-word;
@@ -199,7 +236,7 @@ body {
     text-align: center;
     color: #1A5C00;
     font-size: 16px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 500;
     line-height: 24px;
     word-wrap: break-word;
@@ -337,7 +374,7 @@ body {
     height: 57.55px;
     color: #1A5C00;
     font-size: 14px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 600;
     line-height: 19.14px;
     word-wrap: break-word
@@ -347,7 +384,7 @@ body {
     padding-left: 15px;
     color: #1A5C00;
     font-size: 14px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 600;
     line-height: 19.14px;
 }
@@ -407,7 +444,7 @@ body {
 .category-name {
     color: #1A5C00;
     font-size: 21.31px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 500;
     line-height: 22.22px;
     padding: 9.47px;
@@ -416,7 +453,7 @@ body {
 .category-served {
     color: #75C200;
     font-size: 14.21px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 600;
     line-height: 15.11px;
     padding: 9.47px 11.45px;
@@ -507,7 +544,7 @@ body {
 .category-name {
     color: #1A5C00;
     font-size: 21.31px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 500;
     line-height: 22.22px;
     padding: 9.47px;
@@ -516,7 +553,7 @@ body {
 .category-served {
     color: #75C200;
     font-size: 14.21px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 600;
     line-height: 15.11px;
     padding: 9.47px 11.45px;
@@ -536,7 +573,7 @@ body {
     align-self: stretch;
     color: #1A5C00;
     font-size: 16px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 500;
     line-height: 24px;
     word-wrap: break-word;
@@ -655,7 +692,7 @@ body {
 .section-description {
     color: #1A5C00;
     font-size: 16px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 500;
     line-height: 24px;
     word-wrap: break-word;
@@ -748,7 +785,7 @@ body {
     text-align: center;
     color: #1A5C00;
     font-size: 12px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 500;
     line-height: 19.14px;
 }
@@ -783,7 +820,7 @@ body {
 .team-description p {
     color: #1A5C00;
     font-size: 16px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 500;
     line-height: 24px;
     word-wrap: break-word;
@@ -847,7 +884,7 @@ body {
     gap: 73px;
     color: #1A5C00;
     font-size: 16px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 500;
     line-height: 24px;
     word-wrap: break-word;
@@ -877,7 +914,7 @@ body {
     border-radius: 10px;
     border: 1px #1A5C00 solid;
     padding: 10px;
-    font-family: Poppins;
+    font-family: Arya;
     font-size: 16px;
     color: #1A5C00;
 }
@@ -887,6 +924,7 @@ body {
 }
 
 .newsletter-container {
+    margin-top: 10px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -902,7 +940,7 @@ body {
 .newsletter-label {
     color: #1A5C00;
     font-size: 12px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 400;
 }
 
@@ -914,15 +952,25 @@ body {
     border-radius: 10px;
     color: white;
     font-size: 20px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 500;
     border: none;
     cursor: pointer;
 }
 
-.footer-image-section-brio {
+.submit-button:hover {
+    background: #68ad00;
+    /* Slightly darker shade for hover effect */
+    transform: translateY(-1px);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+.footer-image-container-brio-outlet {
     width: 100%;
-    max-width: 700px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -930,91 +978,30 @@ body {
     align-items: center;
 }
 
-.form-text-area-box {
-    max-width: 1200px;
-    margin-top: -60px;
-}
-
-.background-section {
-    width: 1350px;
-    position: relative;
-    background: #ffffff;
-}
-
-.main-image {
-    width: 868px;
-    height: 289px;
-    position: absolute;
-    left: 174px;
-    top: 167px;
-}
-
-.secondary-image {
-    width: 259px;
-    height: 246px;
-    position: absolute;
-    left: 572px;
-    top: 210px;
-}
-
-.background-shape-1 {
-    position: absolute;
-    left: 100px;
-    top: 377.95px;
-    transform: rotate(-2deg);
-    transform-origin: top left;
-}
-
-.background-shape-2 {
-    position: absolute;
-    left: 571px;
-    top: 424px;
-    transform: rotate(0deg);
-    transform-origin: top left;
-}
-
-.background-shape-3 {
-    position: absolute;
-    left: 907.71px;
-    top: 381px;
-    transform: rotate(2deg);
-    transform-origin: top left;
-}
-
-.additional-image {
-    width: 414px;
-    height: 417px;
-    position: absolute;
-    left: 275px;
-    top: 100px;
-}
-
-.footer-image-layout-setting {
-    max-width: 800px;
-    margin-top: -135px;
-    margin-left: 80px;
+.footer-image-container-brio-outlet img {
+    max-width: 1350px;
+    margin-top: -40px;
 }
 
 .footer-with-logo {
     width: 100%;
-    margin: 673px auto;
+    margin: 0 auto;
+    /* Set to 0 or a small value */
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* overflow: hidden; */
-    /* background: transparent; */
-    POSITION: RELATIVE;
+    position: relative;
 }
 
 .footer-info {
     left: 0;
     width: 100%;
-    height: 221px;
+    height: 280px;
     position: absolute;
-    background: #C18136;
+    background: linear-gradient(180deg, #C18136 0%, #2D1900 100%);
     overflow: hidden;
-    Z-INDEX: 2;
+    Z-INDEX: 10;
     BOTTOM: 0;
 }
 
@@ -1026,9 +1013,9 @@ body {
     top: 35px;
     color: white;
     font-size: 11.25px;
-    font-family: Poppins;
+    font-family: Arya;
     font-weight: 500;
-    line-height: 12.50px;
+    line-height: 20px;
     word-wrap: break-word;
 }
 
@@ -1038,28 +1025,19 @@ body {
 }
 
 .logo-image {
-    width: 176.96px;
-    height: 190px;
+    margin-top: 30px;
+    width: 210.25px;
+    height: 188.428px;
+    flex-shrink: 0;
     position: absolute;
     left: 216px;
     top: 0px;
 }
 
-.footer-note {
-    position: absolute;
-    left: 222px;
-    top: 127px;
-    color: white;
-    font-size: 12.95px;
-    font-family: Poppins;
-    font-weight: 500;
-    line-height: 11.25px;
-}
-
 .social-media {
     position: absolute;
     left: 600px;
-    top: 30px;
+    top: 37px;
     display: flex;
     gap: 8px;
 }
@@ -1083,4 +1061,55 @@ body {
 
 .social-icon[data-platform="LinkedIn"] {
     /* Add specific styles for LinkedIn icon */
+}
+
+.developer-info-container {
+    background: linear-gradient(135deg, #1e1e2f, #2e2e3e);
+    padding: 15px 20px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.developer-info a {
+    color: #00c6ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.developer-info a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 8px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #00c6ff;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+    .developer-info-container {
+        font-size: 13px;
+        padding: 12px 15px;
+    }
+
+    .social-icons a {
+        font-size: 16px;
+        margin: 0 8px;
+    }
 }
