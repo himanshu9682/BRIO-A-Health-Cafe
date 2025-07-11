@@ -752,10 +752,8 @@ body {
 }
 
 .section-image {
-    width: 290px;
-    /* Adjust width as needed */
+    width: 270px;
     height: 134.22px;
-    /* Adjust height as needed */
     border-radius: 10.09px;
 }
 
@@ -841,13 +839,15 @@ body {
     }
 
     .section-description {
+        /* left: 17px; */
         font-size: 14px;
         text-align: center;
-        margin: 0;
-        padding: 0 10px;
+        margin: 20px;
+        padding: 0px 0px;
     }
 
     .section-image {
+        padding-right: 50px;
         width: 100%;
         height: auto;
         max-height: 180px;
@@ -1422,8 +1422,8 @@ body {
 
 .logo-image {
     margin-top: 30px;
-    width: 210.25px;
-    height: 188.428px;
+    width: 210px;
+    height: 210px;
     flex-shrink: 0;
     position: absolute;
     left: 216px;
@@ -1497,7 +1497,7 @@ body {
 @media (max-width: 600px) {
     .footer-info {
         height: auto;
-        padding: 20px 10px 50px;
+        padding: 0px 10px 50px;
         text-align: center;
         position: relative;
     }
@@ -1517,8 +1517,9 @@ body {
     }
 
     .social-media {
+        margin-top: -16px;
         position: static;
-        margin-top: 15px;
+        margin-top: 43px;
         justify-content: center;
         gap: 12px;
     }
