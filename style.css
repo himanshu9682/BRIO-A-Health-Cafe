@@ -22,6 +22,7 @@ body {
 }
 
 
+/* Base styles (unchanged layout) */
 .header {
     width: 1350px;
     height: 90px;
@@ -67,26 +68,19 @@ body {
     font-family: Arya;
     font-weight: 700;
     line-height: 10px;
-    word-wrap: break-word;
 }
 
 .nav-item a {
     position: relative;
     text-decoration: none;
-    padding: 0px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
     color: #1A5C00;
     font-size: 23px;
     font-family: Arya;
     font-weight: 700;
     line-height: 25px;
-    word-wrap: break-word;
 }
 
-/* Remove default underline */
+/* Underline effect */
 .nav-item a::after {
     content: '';
     position: absolute;
@@ -98,27 +92,32 @@ body {
     transition: width 0.3s ease;
 }
 
-/* Show underline for active link */
-.nav-item a.active::after {
-    width: 100%;
-}
-
-/* Optional: animate underline on hover */
+.nav-item a.active::after,
 .nav-item a:hover::after {
     width: 100%;
 }
 
-/* --------------------- RESPONSIVE STYLES --------------------- */
+/* ==================== MOBILE STYLES ==================== */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: #1A5C00;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    z-index: 1100;
+}
 
-/* Mobile: Up to 600px */
 @media (max-width: 600px) {
     .header {
         width: 100%;
         height: auto;
-        padding: 16px;
+        padding: 16px 20px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        position: relative;
     }
 
     .logo {
@@ -126,67 +125,33 @@ body {
         margin-bottom: 10px;
     }
 
+    .hamburger {
+        display: block;
+    }
+
     .nav {
+        display: none;
         position: static;
         flex-direction: column;
         gap: 16px;
         width: 100%;
-        align-items: center;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .nav-item {
+        padding: 10px 0;
     }
 
     .nav-item a {
         font-size: 18px;
+        padding-left: 10px;
     }
 }
-
-/* Tablet: 601px to 1024px */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .header {
-        width: 100%;
-        height: auto;
-        padding: 20px 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo {
-        position: static;
-        margin-bottom: 10px;
-    }
-
-    .nav {
-        position: static;
-        flex-direction: row;
-        gap: 24px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-item a {
-        font-size: 20px;
-    }
-}
-
-/* Optional: For larger screens if needed */
-@media (min-width: 1025px) {
-    .header {
-        width: 100%;
-        max-width: 1350px;
-        margin: 0 auto;
-    }
-
-    .logo {
-        position: absolute;
-        left: 181px;
-    }
-
-    .nav {
-        position: absolute;
-        left: 691px;
-    }
-}
-
 
 .banner {
     align-items: center;
@@ -1548,6 +1513,7 @@ body {
         height: 18px;
     }
 }
+
 /* Developer Info Section */
 
 .developer-info-container {
