@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="script.js">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,7 +23,8 @@
                 <!-- Hamburger Icon -->
                 <div class="hamburger" id="hamburger">&#9776;</div>
 
-                <div class="nav" id="mobile-nav">
+                <!-- Navigation Links -->
+                <div class="nav" id="nav">
                     <div class="nav-item"><a href="#home" class="active">Home</a></div>
                     <div class="nav-item"><a href="#about-us">About Us</a></div>
                     <div class="nav-item"><a href="#products">Products</a></div>
@@ -32,6 +32,15 @@
                 </div>
             </div>
         </div>
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const nav = document.getElementById('nav');
+
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('show');
+                hamburger.innerHTML = nav.classList.contains('show') ? '&#10005;' : '&#9776;';
+            });
+        </script>
         <!-- Banner section -->
         <div class="hero-banner" id="home">
             <img src="Assets/Images/banner-img.webp"
