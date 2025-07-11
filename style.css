@@ -221,6 +221,21 @@ body {
     }
 }
 
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hindi {
+        font-size: 20px;
+    }
+
+    .english {
+        font-size: 14px;
+    }
+
+    .banner-content {
+        padding: 15px;
+    }
+}
+
 /* Base structure */
 .who-we-are {
     margin-top: -110px;
